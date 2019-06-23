@@ -4,7 +4,7 @@ import (
 	"image"
 	"image/color"
 
-	"github.com/uehr/kokun/pkg/imageProcess"
+	"github.com/uehr/kokun/imageProcess"
 )
 
 const DefaultSenryuHeight = 1000
