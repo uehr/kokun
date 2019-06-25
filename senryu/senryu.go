@@ -23,10 +23,10 @@ const DefaultMarginPx = 70
 const DefaultThickBorderPx = 40
 const DefaultThinBorderPx = 10
 
-var DefaultBackgroundColor = image.White
+var DefaultBackgroundColor = color.RGBA{213, 213, 154, 255}
 var DefaultFontColor = color.Black
 var DefaultThickBorderColor = color.RGBA{0, 128, 79, 255}
-var DefaultThinBorderColor = color.RGBA{228, 255, 56, 255}
+var DefaultThinBorderColor = color.RGBA{151, 151, 53, 255}
 
 const DefaultServiceNameFontSize = 30
 
@@ -47,9 +47,9 @@ type SenryuImageOption struct {
 	FontSize            float64
 	AuthorNameFontSize  float64
 	FontPath            string
-	FontColor           color.Color
-	BackgroundColor     image.Image
 	MarginPx            int
+	FontColor           color.Color
+	BackgroundColor     color.Color
 	ThickBorderColor    color.Color
 	ThinBorderColor     color.Color
 	ThickBorderPx       int
@@ -119,9 +119,7 @@ func CreateImage(s *Senryu, option *SenryuImageOption) (*image.RGBA, error) {
 	// option.BackgroundColor = image.RGBA{255, 242, 179, 255}
 	CompleteSenryuImageOption(option)
 
-	img := imageProcess.NewImage(option.SenryuWidth, option.SenryuHeight)
-
-	imageProcess.SetBackgroundColor(img, option.BackgroundColor)
+	img := imageProcess.NewImage(option.SenryuWidth, option.SenryuHeight, option.BackgroundColor)
 
 	// err := imageProcess.AddVerticalLabel(img, option.FirstSentenceLeftX, option.FirstSentenceTopY, s.FirstSentence, option.FontPath, option.FontSize, option.FontColor)
 	err := imageProcess.AddVerticalTopAlignLabel(img, option.FirstSentenceLeftX, s.FirstSentence, option.FontPath, option.FontSize, option.FontColor, option.MarginPx)
