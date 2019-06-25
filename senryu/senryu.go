@@ -23,7 +23,7 @@ const DefaultMarginPx = 70
 const DefaultThickBorderPx = 40
 const DefaultThinBorderPx = 10
 
-var DefaultBackgroundColor = color.RGBA{213, 213, 154, 255}
+var DefaultBackgroundColor = color.RGBA{236, 236, 208, 255}
 var DefaultFontColor = color.Black
 var DefaultThickBorderColor = color.RGBA{0, 128, 79, 255}
 var DefaultThinBorderColor = color.RGBA{151, 151, 53, 255}
