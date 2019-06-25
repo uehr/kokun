@@ -26,7 +26,7 @@ const DefaultThinBorderPx = 10
 var DefaultBackgroundColor = image.White
 var DefaultFontColor = color.Black
 var DefaultThickBorderColor = color.RGBA{0, 128, 79, 255}
-var DefaultThinBorderColor = color.RGBA{255, 215, 0, 255}
+var DefaultThinBorderColor = color.RGBA{142, 152, 67, 255}
 
 const DefaultServiceNameFontSize = 30
 
