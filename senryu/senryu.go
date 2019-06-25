@@ -20,13 +20,13 @@ const DefaultAuthorNameFontSize = 50
 const DefaultFontPath = "fonts/default.ttf"
 
 const DefaultMarginPx = 70
-const DefaultThickBorderPx = 50
+const DefaultThickBorderPx = 30
 const DefaultThinBorderPx = 10
 
 var DefaultBackgroundColor = image.White
 var DefaultFontColor = color.Black
 var DefaultThickBorderColor = color.RGBA{0, 128, 79, 255}
-var DefaultThinBorderColor = color.RGBA{142, 152, 67, 255}
+var DefaultThinBorderColor = color.RGBA{181, 209, 0, 255}
 
 const DefaultServiceNameFontSize = 30
 
