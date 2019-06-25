@@ -156,8 +156,16 @@ func SetBackgroundColor(img *image.RGBA, color image.Image) {
 }
 
 // 新規画像作成
-func NewImage(width int, height int) *image.RGBA {
-	return image.NewRGBA(image.Rect(0, 0, width, height))
+func NewImage(width int, height int, backgroundColor color.Color) *image.RGBA {
+	newImage := image.NewRGBA(image.Rect(0, 0, width, height))
+
+	for y := 0; y < height; y++ {
+		for x := 0; x < width; x++ {
+			newImage.Set(x, y, backgroundColor)
+		}
+	}
+
+	return newImage
 }
 
 // HLine draws a horizontal line
